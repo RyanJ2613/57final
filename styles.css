@@ -9,7 +9,7 @@ header {
   background-color: #000;
   color: #F7C64B;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem 0;
   font-family: 'Oswald', sans-serif;
 }
 
@@ -24,12 +24,13 @@ nav ul {
 nav a {
   color: #F7C64B;
   text-decoration: none;
-  transition:color 2s ease-out;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
 }
 
-
-nav a:hover
-{color:#FFFFFF;}
+nav a:hover {
+  color: #FFFFFF;
+}
 
 nav a[aria-current="page"] {
   text-decoration: underline;
@@ -39,19 +40,19 @@ nav a[aria-current="page"] {
   padding: 2rem;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card {
   background: #fff;
   padding: 2rem;
-  border-width:500px;
+  border-radius: 10px;
   max-width: 800px;
   width: 100%;
-box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-  
-  
-  
-  
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
 
 img {
   max-width: 100%;
@@ -59,25 +60,17 @@ img {
   border-radius: 8px;
 }
 
-footer {padding:15px;
-		text-align:center;
-		font-size:75%;
-		font-family: Georgia, Times, "Times New Roman", serif;
-		font-style:italic;
-		margin-left:190px;
-		background-color:#F9DD94;
-		color:black;
-    margin-left: 0;
-	clear:both;
-  }
-
-
-
-
-
-
-
+footer {
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+  background-color: #F9DD94;
+  color: black;
+  clear: both;
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -85,7 +78,7 @@ table {
 }
 
 th, td {
-  padding: 0.75rem;
+  padding: 1rem;
   border: 1px solid #ccc;
 }
 
@@ -94,7 +87,6 @@ caption {
   margin-bottom: 0.5rem;
 }
 
-
 form {
   display: flex;
   flex-direction: column;
@@ -102,7 +94,7 @@ form {
 }
 
 input, textarea {
-  padding: 0.5rem;
+  padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
@@ -118,6 +110,9 @@ button {
   border-radius: 6px;
 }
 
+button:hover {
+  background-color: #D8C76B;
+}
 
 @media (max-width: 768px) {
   nav ul {
@@ -127,31 +122,38 @@ button {
 
   .card {
     padding: 1rem;
+    margin: 1rem;
   }
 
   body {
     font-size: 0.95rem;
   }
+
+  footer {
+    font-size: 0.75rem;
+  }
 }
 
-h2 {text-align:center}
-
-#yes {text-align:center;}
-
-.step {border:2px solid black;
-background-color:#F9DD94;
-color:black;}
-
-.step2 {border:2px solid black;
-background-color:#F9DD94;
-color:black;}
-
-.step h4 {color:black;
-		
-		text-align:center;
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-.step2 h4 {color:black;
-		
-		text-align:center;
+#yes {
+  text-align: center;
+}
+
+.step, .step2 {
+  border: 2px solid #F7C64B;
+  background-color: #F9DD94;
+  color: black;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.step h4, .step2 h4 {
+  color: black;
+  text-align: center;
+  font-size: 1.2rem;
 }
